@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Appointment Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(black, grey);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .dashboard {
+      background-color: black;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+    }
+
+    h1 {
+      color: #1976d2;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h2,
+    section h3,
+    section h4 {
+      color: #0d47a1;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #bbdefb;
+      padding-bottom: 5px;
+    }
+
+    .button-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    a {
+      text-decoration: none;
+      background-color: #1976d2;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    a:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Medical Receptionist Page</h1>
+
+    <section>
+      <h3>Clients</h3>
+      <div class="button-list">
+        <a href="view_clients.html">View Clients</a>
+        <a href="remove_client.html">Remove Client</a>
+      </div>
+    </section>
+
+    <section>
+      <h4>Doctors</h4>
+      <div class="button-list">
+        <a href="view_doctors.html">View Doctors</a>
+        <a href="remove_doctor.html">Remove Doctor</a>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Appointments</h2>
+      <div class="button-list">
+        <a href="make_appointment.html">Make Appointment</a>
+        <a href="view_appointment.html">View Appointment</a>
+        <a href="cancel_appointment.html">Cancel Appointment</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

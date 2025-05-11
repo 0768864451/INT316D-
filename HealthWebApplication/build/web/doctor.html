@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(black, grey);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: black;
+      padding: 40px 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00796b;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    input[type="text"] {
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #00796b;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #00796b;
+      color: #fff;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Doctors at MediTrust</h1>
+    <form action="addDoctorServlet.do" method="POST">
+      <label for="doc_id">Doctor ID:</label>
+      <input type="text" name="doc_id" id="doc_id" required />
+
+      <label for="doc_name">Doctor Name:</label>
+      <input type="text" name="doc_name" id="doc_name" required />
+
+      <label for="specialization">Doctor Specialization:</label>
+      <input type="text" name="specialization" id="specialization" required />
+
+      <input type="submit" value="ADD DOCTOR" />
+    </form>
+  </div>
+</body>
+</html>

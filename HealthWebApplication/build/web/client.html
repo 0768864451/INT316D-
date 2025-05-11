@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(black, grey);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: black;
+      padding: 40px 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #33691e;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #558b2f;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #558b2f;
+      color: #fff;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #33691e;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Client at MediTrust</h1>
+    <form action="AddClientServlet.do" method="POST">
+      <label for="client_id">Client ID:</label>
+      <input type="text" name="client_id" id="client_id" required />
+
+      <label for="client_name">Client Name:</label>
+      <input type="text" name="client_name" id="client_name" required />
+
+      <label for="client_age">Client Age:</label>
+      <input type="number" name="client_age" id="client_age" required />
+
+      <input type="submit" value="ADD CLIENT" />
+    </form>
+  </div>
+</body>
+</html>

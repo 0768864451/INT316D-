@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Make Appointment Page</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(black, grey);
+                padding: 40px;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .appointment-form {
+                background-color: black;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 500px;
+            }
+
+            h1 {
+                color: #1976d2;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            table {
+                width: 100%;
+                margin-bottom: 20px;
+                color: white;
+            }
+
+            td {
+                padding: 10px;
+            }
+
+            label {
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                padding: 8px;
+                font-size: 16px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                margin-top: 5px;
+            }
+
+            .button-wrapper {
+                text-align: center;
+            }
+
+            input[type="submit"] {
+                width: 60%;
+                padding: 12px;
+                font-size: 16px;
+                color: #fff;
+                background-color: #1976d2;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #125ea2;
+            }
+
+            p {
+                color: lightgreen;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="appointment-form">
+            <h1>Make Appointment</h1>
+            <p>Note! Enter Client and Doctor ID that are persisted in the database...</p>
+            <form action="MakeAppointmentServlet.do" method="POST">
+                <table>
+                    <tr>
+                        <td><label for="appointment_id">Appointment ID:</label></td>
+                        <td><input type="text" id="appointment_id" name="appointment_id" required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="client_id">Client ID:</label></td>
+                        <td><input type="text" id="client_id" name="client_id" required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="doctor_id">Doctor ID:</label></td>
+                        <td><input type="text" id="doctor_id" name="doctor_id" required /></td>
+                    </tr>
+                </table>
+                <div class="button-wrapper">
+                    <input type="submit" value="MAKE APPOINTMENT" />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
